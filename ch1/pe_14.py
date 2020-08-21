@@ -97,14 +97,7 @@ class Player:
     def hand_size(self):
         return len(self.hand)
 
-    def pick_card(self):
-        if len(self.hand) == 0:
-            return 'empty hand'
-        else:
-            random_card = random.randint(1, len(self.hand)-1)
-            return self.hand[random_card]
-
-
+  
 # d = Deck()
 # p1 = Player('laura')
 # p1.pick_card()
