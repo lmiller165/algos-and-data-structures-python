@@ -2,28 +2,12 @@
 # 15 Find a sudoku puzzle. Write a program to solve it. 
 
 class Block:
-    def __init__(self):
+    def __init__(self, data):
         self.block = [
             [1, 2, 3],
             [4, 5, 6],
             [7, 8, 9]
         ]
-        
-    def __repr__(self):
-        new_row = '+ - + - + - + '
-        final_row = '--------------'
-        row1 = f'  {self.block[0][0]}   {self.block[0][1]}   {self.block[0][2]} |' 
-        row2 = f'  {self.block[1][0]}   {self.block[1][1]}   {self.block[1][2]} |' 
-        row3 = f'  {self.block[2][0]}   {self.block[2][1]}   {self.block[2][2]} |' 
-        return f"{new_row}\n{row1}\n{new_row}\n{row2}\n{new_row}\n{row3}\n{final_row}"
-
-    def __str__(self):
-        new_row = '+ - + - + - + '
-        final_row = '--------------'
-        row1 = f'  {self.block[0][0]}   {self.block[0][1]}   {self.block[0][2]} |' 
-        row2 = f'  {self.block[1][0]}   {self.block[1][1]}   {self.block[1][2]} |' 
-        row3 = f'  {self.block[2][0]}   {self.block[2][1]}   {self.block[2][2]} |' 
-        return f"{new_row}\n{row1}\n{new_row}\n{row2}\n{new_row}\n{row3}\n{final_row}"
 
     def getPos(self, num):
         return self.block[num]
@@ -31,15 +15,15 @@ class Block:
 
 class Board:
     def __init__(self):
-        self.BL1 = Block()
-        self.BL2 = Block()
-        self.BL3 = Block()
-        self.BL4 = Block()
-        self.BL5 = Block()
-        self.BL6 = Block()
-        self.BL7 = Block()
-        self.BL8 = Block()
-        self.BL9 = Block()
+        self.BL1 = Block(block_1)
+        self.BL2 = Block(block_2)
+        self.BL3 = Block(block_3)
+        self.BL4 = Block(block_4)
+        self.BL5 = Block(block_5)
+        self.BL6 = Block(block_6)
+        self.BL7 = Block(block_7)
+        self.BL8 = Block(block_8)
+        self.BL9 = Block(block_9)
 
         self.board = [
             [self.BL1, self.BL2, self.BL3],
